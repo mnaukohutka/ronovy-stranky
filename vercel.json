@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "Komunita/**/*.html", "use": "@vercel/static" },
+    { "src": "Komunita/**/*.css", "use": "@vercel/static" },
+    { "src": "Komunita/**/*.js", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/Komunita/přehled/" },
+    { "src": "/Komunita/(.*)", "dest": "/Komunita/$1" }
+  ]
+}
