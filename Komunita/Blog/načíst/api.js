@@ -3,6 +3,7 @@
 
 import { createClient } from '@supabase/supabase-js';
 import createAuth0Client from '@auth0/auth0-spa-js';
+import {fetchAllPosts, initAuth0}from './api.js';
 
 const domain = 'ronovys.eu.auth0.com';
 const clientId = 'PIsBVcJ5HbQA1S2ob3vdNOTGhtdP6z4K';
