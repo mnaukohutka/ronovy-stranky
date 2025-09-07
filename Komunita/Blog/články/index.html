@@ -1,22 +1,22 @@
-<!-- články/index.html -->
 <!DOCTYPE html>
 <html lang="cs">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seznam článků</title>
+  <title>RS-Blog – Články</title>
   <link href="https://fonts.googleapis.com/css?family=Comic+Neue:700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Navigační menu -->
   <div id="menubar"></div>
 
-  <!-- Sticky search bar -->
+  <!-- Stický vyhledávací lišta -->
   <div id="sticky-search-bar" class="sticky-search-bar">
     <div class="sticky-search-container">
       <div class="search-input-container">
-        <input type="text" id="sticky-search" placeholder="Hledat článek...">
+        <input type="text" id="sticky-search" placeholder="Hledat článek..." />
         <button id="filter-toggle" class="filter-toggle" aria-label="Zobrazit filtry">
           <i class="fas fa-filter"></i>
         </button>
@@ -44,12 +44,19 @@
     </div>
   </div>
 
+  <!-- Hlavní banner s vyhledáváním -->
   <div class="search-banner container">
-    <h1 data-aos="fade-down">Blog</h1>
-    <img src="https://placehold.co/50x50?text=?" alt="Profilový avatar" class="profile-avatar" id="avatar-icon" title="Můj profil" onclick="window.location.href='../login.html'">
+    <h1 data-aos="fade-down">Články</h1>
+    <img src="https://placehold.co/50x50?text=?"
+         alt="Profilový avatar"
+         class="profile-avatar"
+         id="avatar-icon"
+         title="Můj profil"
+         onclick="window.location.href='../login.html'" />
     <a href="../písař/" class="admin-link" id="admin-link" style="display:none;" title="Administrace">✍️</a>
+
     <div class="search-filter-bar">
-      <input type="text" id="search" placeholder="Hledat článek...">
+      <input type="text" id="search" placeholder="Hledat článek..." />
       <select id="filter-category">
         <option value="">Všechny kategorie</option>
         <option value="technologie">🔧 Technologie</option>
@@ -71,6 +78,7 @@
     </div>
   </div>
 
+  <!-- Seznam článků -->
   <div class="container">
     <div id="loading" class="loading">
       <div class="spinner"></div>
@@ -82,13 +90,15 @@
     </div>
   </div>
 
+  <!-- Detail a modal hodnocení vloženy dynamicky -->
   <div id="recipe-detail" class="detail"></div>
   <div id="rating-modal-root"></div>
 
-  <script type="module" src="script.js">/script>
+  <!-- Skripty -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script src="https://cdn.auth0.com/js/auth0-spa-js/1.22/auth0-spa-js.production.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script type="module" src="api.js"></script>
   <script type="module" src="script.js"></script>
 </body>
 </html>
